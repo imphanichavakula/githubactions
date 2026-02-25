@@ -24,7 +24,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: Toolsinstall
     steps:
+    - uses: actions/checkout@v4
     - name: Build with Maven
+   
       run: mvn clean install
       working-directory: Boardgame-main
   Upload:
@@ -32,6 +34,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: Mavenbuild
     steps:
+    - uses: actions/checkout@v4
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
