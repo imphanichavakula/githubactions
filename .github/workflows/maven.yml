@@ -5,12 +5,14 @@ on:
   push:
     branches: [ "master" ]
   
-
+env:
+ APP_NAME: GITHUB-WORKFLOW
 jobs:
   Toolsinstall:
 
     runs-on: ubuntu-latest
-
+    env :
+      job_NAME: tools
     steps:
     - uses: actions/checkout@v4
     - name: Set up JDK 17
@@ -19,6 +21,7 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
+        run: echo "$job_NAME"
   Mavenbuild:
 
     runs-on: ubuntu-latest
@@ -34,7 +37,7 @@ jobs:
       with:
          name: artifact name
          path:  Boardgame-main/target/*.jar
-         cache: maven
+         
 
   Download:
 
@@ -45,7 +48,7 @@ jobs:
          uses : actions/download-artifact@v4
          with:
           name: artifact name
-          cache: maven
+          
 
          
   DEPLOYMENT:
