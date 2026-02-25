@@ -27,6 +27,8 @@ jobs:
       with:
          name: artifact name
          path:  Boardgame-main/target/*.jar
+    - name: Deploy
+      run: echo "deployment sucess"
          
          
       
