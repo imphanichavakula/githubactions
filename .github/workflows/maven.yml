@@ -43,7 +43,7 @@ jobs:
        - name : download
          uses : actions/download-artifact@v4
          with:
-          name: app-jar
+          name: artifact name
 
          
   DEPLOYMENT:
