@@ -21,7 +21,8 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
-        run: echo "$job_NAME"
+    - name: print job name 
+      run: echo "$job_NAME"
   Mavenbuild:
 
     runs-on: ubuntu-latest
