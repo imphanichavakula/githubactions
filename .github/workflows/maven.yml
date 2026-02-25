@@ -21,11 +21,12 @@ jobs:
         with:
           filters: |
             java:
-              - 'src/**'
-              - 'pom.xml'
-              - '.mvn/**'
-              - 'mvnw'
-              - 'mvnw.cmd'
+              
+              - 'Boardgame-main/src/**'
+              - 'Boardgame-main/pom.xml'
+              - 'Boardgame-main/.mvn/**'
+              - 'Boardgame-main/mvnw'
+              - 'Boardgame-main/mvnw.cmd'
             docker:
               - 'Dockerfile'
               - 'docker/**'
