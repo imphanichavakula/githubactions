@@ -34,6 +34,7 @@ jobs:
       with:
          name: artifact name
          path:  Boardgame-main/target/*.jar
+         cache: maven
 
   Download:
 
@@ -44,6 +45,7 @@ jobs:
          uses : actions/download-artifact@v4
          with:
           name: artifact name
+          cache: maven
 
          
   DEPLOYMENT:
