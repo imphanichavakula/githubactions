@@ -6,9 +6,7 @@ pipeline {
         jdk 'jdk17'          // Must match Global Tool Configuration names
     }
 
-    triggers {
-        githubPush()
-    }
+   
 
     stages {
         
