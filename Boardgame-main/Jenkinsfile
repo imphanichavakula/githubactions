@@ -1,29 +1,49 @@
 pipeline {
     agent any
-
- tools {
-     jdk 'java17'
-     maven 'maven3.6'
- }
     
+     tools {
+        maven 'maven 3.9'     // Must match Global Tool Configuration name
+        jdk 'jdk17'          // Must match Global Tool Configuration name
+    }
+
     stages {
         
-        stage('Compile') {
+        stage('compile') {
             steps {
-            sh  'mvn compile'
-            }
+               dir('Boardgame-main') {
+               sh 'mvn compile'
+        }
+        }
+        }
+        stage('package') {
+            steps {
+               dir('Boardgame-main') {
+               sh 'mvn compile'
+        } 
+        }
         }
         
-        stage('Testing') {
-            steps {
-                sh 'mvn test'
-            }
-        }
         
-        stage('Building The Project') {
-            steps {
-                sh 'mvn package'
-            }
-        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     }
 }
