@@ -1,6 +1,6 @@
 FROM openjdk:17-alpine
         
-EXPOSE 808846
+EXPOSE 8088464
  
 ENV APP_HOME /usr/src/app
 
