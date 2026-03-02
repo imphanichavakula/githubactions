@@ -3,7 +3,7 @@ pipeline {
     
      tools {
         maven 'maven 3.9'     // Must match Global Tool Configuration nass
-        jdk 'jdk17'          // Must match Global Tool Configuration namesddsdd
+        jdk 'jdk17'          // Must match Global Tool Configuration namesddsdde
     }
 
    
