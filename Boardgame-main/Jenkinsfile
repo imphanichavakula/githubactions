@@ -2,7 +2,7 @@ pipeline {
     agent any
     
      tools {
-        maven 'maven 3.9'     // Must match Global Tool Configuration nass
+        maven 'maven 3.9'     // Must match Global Tool Configuration nassr
         jdk 'jdk17'          // Must match Global Tool Configuratioee neamersddsdde
     }
 
